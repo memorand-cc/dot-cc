@@ -29,24 +29,23 @@ p {
 	max-width: 41rem;
 	padding: 0 2rem;
 }
-footer {
+#stripe {
 	width: 18rem;
-	margin: 4rem auto;
+	margin: 4rem auto 1rem auto;
 	background-color: #d1cfbf;
 	border-radius: 4px;
 	padding: 2rem 1rem 1rem 1rem;
 }
-footer > p {
+#stripe > p {
 	color: #1f1f1f;
-	font-size: 1.2rem;
 	text-align: center;
 	margin: 0;
 	padding: 0;
 }
-footer > p.price {
+#stripe > p.price {
 	font-size: 1.8rem;
 }
-footer > a {
+#stripe > a {
 	display: block;
 	margin: 2rem 1rem 1rem 1rem;
 	background-color: #bb3a22;
@@ -58,4 +57,35 @@ footer > a {
 	letter-spacing: 0.6px;
 	text-decoration: none;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+footer {
+	text-align: center;
+	font-size: 0.9rem;
+	color: #666;
+}
+footer > a {
+	color: #999;
+	text-decoration: none;
+}
+footer > a:hover {
+	text-decoration: underline;
+}
+
+@media screen and (max-width: 1023px) {
+	footer {
+		margin-bottom: 2rem;
+	}
+	footer > section {
+		margin-top: 8rem;
+	}
+}
+@media screen and (min-width: 1024px) {
+	footer {
+		margin-bottom: 4rem;
+	}
+	footer > section {
+		position: fixed;
+		bottom: 1rem;
+		right: 1rem;
+	}
 }
