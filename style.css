@@ -107,11 +107,12 @@ a:hover {
 #join > a {
 	display: block;
 	font-size: 1.25rem;
-	border: 2px solid;
+	color: #d1cfbe;
+	border: 2px solid #d1cfbe;
 	border-radius: 4px;
 	padding: 1rem;
 	margin: 2rem auto 0 auto;
-	width: max-16rem;
+	max-width: 16rem;
 }
 #join > a:hover {
 	background-color: #d1cfbe;
