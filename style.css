@@ -125,6 +125,11 @@ a:hover {
 	background-color: var(--foreColor);
 	color: var(--backColor);
 }
+#kofi {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
 
 @media screen and (max-width: 1279px) {
 	header {
@@ -160,3 +165,4 @@ a:hover {
 		margin: 0 auto;
 	}
 }
+
