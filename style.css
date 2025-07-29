@@ -118,6 +118,11 @@ a:hover {
 	background-color: #d1cfbe;
 	color: #1f1f1f;
 }
+#kofi {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
 
 @media screen and (max-width: 1279px) {
 	header {
