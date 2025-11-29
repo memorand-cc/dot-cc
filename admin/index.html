@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300&display=swap" rel="stylesheet"> 
+		<title>madmin</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+		<style type="text/css" media="screen">
+			:root {
+				--backColor: #f0f0f0;
+				--foreColor: #333;
+				--hoverColor: #fe0;
+				--borderColor: #fcfcfc;
+			}
+			[data-theme="dark"] {
+				--backColor: #1f1f1f;
+				--foreColor: #d1d1d1;
+				--hoverColor: #2d2d2d;
+				--borderColor: #000;
+			}
+			* {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				box-sizing: border-box;
+			}
+			html, body, ul, li, a {
+				width: 100%;
+				height: 100%;
+			}
+			body {
+				border: 1px solid var(--borderColor);
+			}
+			ul {
+				list-style: none;
+				display: grid;
+				grid-template: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr / 1fr;
+			}
+			li {
+				background-color: var(--backColor);
+				border: 1px solid var(--borderColor);
+			}
+			a {
+				text-align: center;
+				align-content: center;
+				display: block;
+				font-family: "Roboto Condensed", helvetica, sans-serif;
+				font-weight: 300;
+				font-size: 2.427em;
+				color: var(--foreColor);
+				padding: 1rem;
+				background-color: transparent;
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+			a:hover {
+				background-color: var(--hoverColor);
+			}
+			button {
+				background-color: transparent;
+				font-family: monospace;
+				font-size: 2.4rem;
+				position: fixed;
+				bottom: 0;
+				right: 0;
+				width: 3rem;
+				height: 3rem;
+				cursor: pointer;
+			}
+
+			@media screen and (min-width: 720px) {
+				ul {
+					grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="https://app.n26.com/feed/transactions/">N26</a></li>
+			<li><a href="https://dashboard.stripe.com/acct_1RoXNZDJVSeqJK83/dashboard">Stripe</a></li>
+			<li><a href="https://ko-fi.com/Manage/">Ko-fi</a></li>
+			<li><a href="https://ap.www.namecheap.com/">Namecheap</a></li>
+			<li><a href="https://console.hetzner.com/projects/10110495/servers">Hetzner</a></li>
+			<li><a href="https://github.com/memorand-cc?tab=repositories">GitHub</a></li>
+			<li><a href="https://torbox.app/dashboard">TorBox</a></li>
+			<li><a href="https://paradise-cloud.com/dashboard">EasyDebrid</a></li>
+			<li><a href="https://www.notion.so/portobello-tv/1cb7d1d1ebf88027950acf11f90c4b78?v=1cb7d1d1ebf880259f79000cbac53af2">Notion</a></li>
+			<li><a href="https://mail.proton.me/u/0/inbox">Proton Mail</a></li>
+			<li><a href="https://mail.google.com/mail/u/0/#inbox">Gmail</a></li>
+			<li><a href="https://bsky.app/profile/memorand.cc">Bluesky</a></li>
+			<li><a href="https://discord.com/channels/1400649623118287000/1400649623676256318">Discord</a></li>
+			<li><a href="https://www.reddit.com/user/forstorr/m/memorand/">Reddit</a></li>
+			<li><a href="https://portobello.cloud/stremio/configure">AIOStreams</a></li>
+		</ul>
+		<nav>
+			<button id="theme-toggle" title="Switch color theme">&#9680;</button>
+		</nav>
+		<script type="text/javascript">
+			const toggleButton = document.getElementById('theme-toggle');
+			const currentTheme = localStorage.getItem('theme');
+
+			// Apply the saved theme (if any) on page load
+			if (currentTheme) {
+				document.documentElement.setAttribute('data-theme', currentTheme);
+				if (currentTheme == 'dark') toggleButton.style.color = '#f0f0f0';
+				else toggleButton.style.color = '#1f1f1f';
+			}
+
+			// Toggle theme on button click
+			toggleButton.addEventListener('click', () => {
+				const current = document.documentElement.getAttribute('data-theme');
+				const newTheme = current === 'dark' ? 'light' : 'dark';
+				document.documentElement.setAttribute('data-theme', newTheme);
+				if (newTheme == 'dark') toggleButton.style.color = '#f0f0f0';
+				else toggleButton.style.color = '#1f1f1f';
+
+				// Save the new theme in localStorage
+				localStorage.setItem('theme', newTheme);
+			});
+		</script>
+		<script type="text/javascript">
+			document.addEventListener("keydown", function (event) {
+				if (event.code === "KeyA") window.location = "https://arr.javiloureiro.com";
+				if (event.code === "KeyH") window.location = "https://home.javiloureiro.com";
+				if (event.code === "KeyW") window.location = "https://work.javiloureiro.com";
+				if (event.code === "KeyC") document.getElementById("theme-toggle").click();
+			});
+		</script>
+	</body>
+</html>
