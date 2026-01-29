@@ -165,33 +165,3 @@ a:hover {
 		margin: 0 auto;
 	}
 }
-
-
-
-
-
-#logo {
-	text-align: center;
-	padding-top: 9rem;
-}
-#logo > img {
-	border-radius: 50%;
-	width: 12rem;
-	height: 12rem;
-}
-
-@media screen and (min-width: 1024px) {
-	#logo > img {
-		border-radius: 50%;
-		width: 12rem;
-		height: 12rem;
-		position: absolute;
-		bottom: 4rem;
-		right: 2rem;
-	}
-}
-@media screen and (min-width: 1280px) {
-	#logo > img {
-		right: 4rem;
-	}
-}
